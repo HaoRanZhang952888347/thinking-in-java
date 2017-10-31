@@ -1,0 +1,22 @@
+//:three/Exercise3_4
+
+/*运算符的运用
+*@author HaoRanZhang
+*/
+
+import java.util.*;
+public class Exercise3_4{
+	public static void main(String[] args){
+		Scanner scanner = new Scanner(System.in);
+		double s;
+		double t;
+		double v;
+		
+		System.out.println("请输入路程:");
+		s=scanner.nextDouble();
+		System.out.println("请输入时间:");
+		t=scanner.nextDouble();
+		v=s/t;
+		System.out.println("速度为:"+v);
+	}
+}
