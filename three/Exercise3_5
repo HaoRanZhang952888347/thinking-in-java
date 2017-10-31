@@ -1,0 +1,27 @@
+//:three/Exercise3_5
+
+/*创建一个Dog类，它包含两个String域：name和says。
+  在main()方法中，创建两个Dog对象，一个名为spot(它的叫声为"Ruff!")
+  一个名为scruffy(叫声"Wurf!")。然后显示它们的名字和叫声。
+
+*@author HaoRanZhang
+*/
+
+class Dog{
+	String name;
+	String says;
+}
+
+public class Exercise3_5{
+	public static void main(String[] args){
+		Dog dog1 = new Dog();
+		Dog dog2 = new Dog();
+		dog1.name = "spot";
+		dog2.name = "scraffy";
+		dog1.says = "Ruff!";
+		dog2.says = "Wurf!";
+		
+		System.out.println("dog1 name:"+dog1.name+" says:"+dog1.says);
+		System.out.println("dog2 name:"+dog2.name+" says:"+dog2.says);
+	}
+}
