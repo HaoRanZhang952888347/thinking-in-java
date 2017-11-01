@@ -1,0 +1,60 @@
+//:one/Exercise2_10_1
+
+/**打印出从命令行获得的三个参数。为此需要确定命令行数组中String的下标。
+*命令执行：javac Exercise2_10_1.java
+*          java Exercise2_10_1  12 45 35
+*@author HaoRanZhang
+*/
+
+public class Exercise2_10_1{
+	public static void main(String[] args){
+		System.out.println("命令行数组长度:"+args.length);
+		
+		if(args.length<3){
+			System.out.println("请输入3个参数:");
+		}
+		else{
+			for(int i = 0;i<3;i++){
+				System.out.println("第"+i+"个参数:"+args[i]);
+			}
+		}
+	}
+}
+
+
+
+
+///////////////////////////////////////////////////////////////////////
+//:one/Exercise2_10
+
+/**打印出从命令行获得的三个参数。为此需要确定命令行数组中String的下标。
+*@author HaoRanZhang
+*/
+
+import java.util.*;
+
+public class Exercise2_10{
+	public static void main(String[] args){
+		int[] str = new int[3];
+		int i;
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("请输入3个数据:");
+		for(i=0;i<=2;i++){
+			str[i] = scanner.nextInt();
+		}
+		for(int t = 0;t<3;t++){
+			System.out.println(" 结果:"+"第"+t+"个："+str[t]);
+		}
+		}
+	}
+
+
+
+
+
+
+
+
+
+
