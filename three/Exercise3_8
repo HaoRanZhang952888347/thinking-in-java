@@ -1,0 +1,16 @@
+//:three/Exercise3_8
+
+/**展示用十六进制和八进制计数法来操作long值，用Long.toBinaryString()来显示结果
+ *@author HaoRanZhang
+ */
+
+public class Exercise3_8{
+	public static void main(String[] args){
+		long i1 = 0x2f;
+		System.out.println("i1:"+Long.toBinaryString(i1));
+		long i2 = 0177;
+		System.out.println("i2:"+Long.toBinaryString(i2));
+	}
+}
+//i1:101111
+  i2:1111111
