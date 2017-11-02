@@ -1,0 +1,25 @@
+//:one/Exercise2_12
+
+import java.util.*;
+
+/**The first thinking in java example program
+*Displays a string and today's data
+*@author HaoRanZhang
+*version 4.0
+*/
+
+public class HelloWorld{
+	/**Entrv point to class & application
+	 *@param args array of string arguments
+	 *@throws exceptions No exercise thrown
+	 */
+	 public static void main(String[] args){
+	 	System.out.println("Hello,it's:");
+	 	System.out.println(new Date());
+	 }
+	}/*Output:(55% match)
+	Hello,it's:
+	......
+	*///:~
+
+
