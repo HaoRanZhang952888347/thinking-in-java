@@ -1,0 +1,22 @@
+//:three/Exercise3_10
+
+import java.util.*;
+
+/**编写一个具有两个常量值的程序，一个具有交替的二进制位1和0，
+*其中最低有效位0，另一个也具有交替的二进制位1和0，但是其最低有效位为1。
+*取这两个值，用按位操作符以所有可能的方式集合运算它们，然后用Integer.toBinaryString()显示
+*@suthor HaoRanZhang
+*/
+
+public class Exercise3_10{
+	public static void main(String[] aargs){
+		int i1 = 0x2f;
+		int i2 = 0x30;
+		System.out.println(" i1:"+Integer.toBinaryString(i1));
+		System.out.println(" i2:"+Integer.toBinaryString(i2));
+		System.out.println(" i1&i2:"+Integer.toBinaryString(i1&i2));
+		System.out.println(" i1|i2:"+Integer.toBinaryString(i1|i2));
+		System.out.println(" i1^i2:"+Integer.toBinaryString(i1^i2));
+		System.out.println(" ~i1:"+Integer.toBinaryString(~i1));
+	}
+}
