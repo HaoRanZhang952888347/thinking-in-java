@@ -1,0 +1,39 @@
+//:four/Exercise4_3
+//一切皆为对象
+import java.util.*;
+
+/**修改练习2，把代码用一个while无限循环包括起来。然后运行直至用键盘中断其运行(通常通过Ctrl+C)
+*@author
+*/
+
+public class Exercise4_3{
+	public static void main(String[] args){
+		voluation();
+	}
+	public static void compare(int n1,int n2){
+	if(n1>n2){
+		System.out.println(n1+">"+n2);
+	}else if(n1<n2){
+		System.out.println(n1+"<"+n2);
+	}else{
+		System.out.println(n1+"="+n2);
+	}
+}
+
+public static void voluation(){
+	Random rand = new Random();
+	int[] set = new int[3];
+	int i = 0;
+	while(true){
+		i++;
+		set[i] = rand.nextInt(100);
+	if(i>0){
+		compare(set[i-1],set[i]);
+		set[i-1] = rand.nextInt(100);
+	}
+	if(i>1){
+		i--;
+	}
+	}
+}
+}
