@@ -1,0 +1,14 @@
+//:four/Exercise4_4_1
+
+public class Exercise4_4_1{
+	
+	public static void main(String[] args){
+		outer:
+		for(int j = 0;j<10;j++){
+			for(int i = 2;i<j;i++){
+			if(j%i==0)continue outer;
+		}
+			System.out.print(j+" ");
+		}
+	}
+}
