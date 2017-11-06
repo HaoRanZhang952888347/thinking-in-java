@@ -1,0 +1,31 @@
+//:four/Exercise4_6
+
+/**修改前两个程序中的test()方法，让他们接受两个额外的参数begin和end,
+*这样在测试testval时将判断它是否在begin和end之间的范围内
+*@author HaoRanZhang
+*/
+
+public class Exercise4_6_1{
+	static int result = 0;
+	static void test(int testval,int target){
+		System.out.println("begin");
+		if(testval>target){
+			result = +1;
+		}
+		if(testval<target){
+			result = -1;
+		}
+		else{
+			result = 0;
+		}
+		System.out.println("end");
+	}
+	public static void main(String[] args){
+		test(10,5);
+		System.out.println(result);
+		test(5,10);
+		System.out.println(result);
+		test(5,5);
+		System.out.println(result);
+	}
+}
