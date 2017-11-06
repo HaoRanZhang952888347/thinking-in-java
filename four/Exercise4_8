@@ -1,0 +1,31 @@
+//:four/Exercise4_8
+
+import java.util.*;
+
+/**写一个switch开关语句,为每个case打印一个消息.然后把这个
+switch放进for循环来测试每一个case。先让每个case后面都有break，
+测试一下会怎样；然后把break删了，看看会怎样.
+*@author HaoRanZhang
+*/
+
+public class Exercise4_8{
+	public static void main(String[] args){
+		Random rand = new Random(47);
+		for(int i = 0;i<100;i++){
+			int c = rand.nextInt(26)+'a';
+			System.out.print((char)c+","+c+":");
+			switch(c){
+				case 'a':
+				case 'e':
+				case 'i':
+				case 'o':
+				case 'u':System.out.println("vowel");
+				          break;
+				case 'y':
+				case 'w':System.out.println("sometime is a vowel");
+				         break;
+				default:System.out.println("consonant");
+			}
+		}
+	}
+}
