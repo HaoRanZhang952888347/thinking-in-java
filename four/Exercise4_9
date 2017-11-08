@@ -1,0 +1,36 @@
+//:four/Exercise4_9
+
+import java.util.*;
+
+/**一个斐波那契数列是由数字1,1,2,3,5,8,13,21,34等等组成的，其中每个数字(从第三个数字起)
+   都是前两个数字的和。创建一个方法，接受一整数参数，并显示从第一个元素开始总总共由该参数指定
+   的个数所构成的所有斐波那契数列。例如:如果运行java Fibonacci 5(Fibonacci为类名),输出为1,1,2,3,5
+*@author HaoRanZhang
+*/
+
+public class Exercise4_9{
+	public static void main(String[] args){
+		int temp1 = 1;
+		int temp2 = 1;
+		int num = Integer.parseInt(args[0]);
+		int[] a = new int[100];
+		//System.out.print(args.length+","+num);
+		for(int i = 0;i<num;i++){
+			switch(i){
+				case 0:System.out.print((i+1)+",");
+				       break;
+				case 1:System.out.print((i)+",");
+				       break;
+				default://args[i-2] = "0";
+				        //args[i-2] = Integer.toString(temp1 + temp2);
+				        //java.lang.ArrayIndexOutOfBoundsException:数组下标溢出错误显示
+				        //修正:可在类名后加参数，如:java Exercise4_9 5 2;扩充args数组
+				        a[i-2] = temp1+temp2;
+				        temp2 = temp1;
+				        //temp1 = Integer.parseInt(args[i-2]);
+				        temp1 = a[i-2];
+				        System.out.print(a[i-2]+",");
+			}
+		}
+	}
+}
