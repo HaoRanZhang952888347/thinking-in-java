@@ -1,0 +1,17 @@
+package five;
+//:five/Exercise5_1
+/**创建一个类,它包含一个未初始化的String引用.
+ * 验证该引用被java初始化成了null
+ * @author apple
+ *
+ */
+public class Exercise5_1 {
+	static class num{//在主方法中调用，只能调用静态类
+		String a;
+	}
+	public static void main(String[] args) {
+		num i = new num();
+		System.out.println(" "+i.a);
+	}
+
+}
