@@ -1,0 +1,31 @@
+package five;
+
+import java.util.*;
+
+/**创建一个名为Dog的类,它具有重载的bark（）方法。此方法应根据不同的基本数据类型进行重载
+ * 并根据类型进行重载，并根据被调用的版本，打印出不同类型的狗吠（breaking），咆哮（howling）
+ * 等信息。编写main（）来调用所有不同版本的方法。
+ * @author apple
+ *
+ */
+public class Exercise5_5 {
+	public static void main(String[] args) {
+		Dog TaiDi=new Dog("TaiDi",2);
+		TaiDi.bark(0);
+		Dog JinMao=new Dog("JinMao",5);
+		JinMao.bark("s");
+	}
+
+}
+
+class Dog{
+	Dog(String name,int age) {//构造器前面不用标注方法类型
+		System.out.print("Dog name:"+name+" age:"+age);
+	}
+	void bark(int i) {
+		System.out.println(" bar:barking");
+	}
+	void bark(String s) {
+		System.out.println("bar:howling");
+	}
+}
