@@ -1,0 +1,26 @@
+package five;
+
+import java.util.*;
+
+/**创建一个带默认构造器(即无參构造器)的类,在构造器中打印一条消息.为这个类创建一个对象。
+ * 
+ * @author apple
+ *
+ */
+public class Exercise5_3 {
+	static class printOut{
+		printOut(){
+			System.out.print("输出:");
+		}
+		printOut(String s){
+			System.out.println(s);
+		}
+	}
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		new printOut();
+		String s = scanner.nextLine();
+		new printOut(s);
+	}
+
+}
