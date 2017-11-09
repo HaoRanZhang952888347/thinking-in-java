@@ -1,0 +1,16 @@
+package five;
+
+public class Exercise5_2 {
+	public static void main(String[] args) {
+		String s="HelloWorld";
+		new Rock("bye");
+		String x = null;
+		System.out.println(s+":"+x);
+		
+	}
+}
+class Rock{
+	Rock(String s){
+		String x=s;
+	}
+}
