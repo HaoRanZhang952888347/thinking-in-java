@@ -1,0 +1,48 @@
+package four;
+
+import java.util.*;
+
+/**吸血鬼数字是指位数为偶数的数字，可以由一对数字相乘得到，而这对数字
+各包含乘积的一半位数的数字，其中从最初的数字中选取的数字可以任意排序。
+以两个0结尾的数字是不允许的。
+*@HaoRanZhang
+*/
+
+public class Exercise4_10{
+	static int g(int i) {
+		return  i%10;
+	}
+	static int s(int i) {
+		return (i/10)%10;
+	}
+	static int b(int i) {
+		return (i/100)%10;
+	}
+	static int q(int i) {
+		return i/1000;
+	}
+	static int sum(int i, int j) {
+		return (i*10)+j;
+	}
+	static void productTest(int i,int j,int k) {
+		if(i==j*k) System.out.println(i+"="+j+"*"+k+";");
+	}
+	public static void main(String[] args) {
+		for(int i = 1000;i<10000;i++) {
+			if(i%100==0)continue;
+			productTest(i,sum(g(i),s(i)),sum(b(i),q(i)));
+			productTest(i,sum(g(i),s(i)),sum(q(i),b(i)));
+			productTest(i,sum(g(i),b(i)),sum(s(i),q(i)));
+			productTest(i,sum(g(i),b(i)),sum(q(i),s(i)));
+			productTest(i,sum(g(i),q(i)),sum(s(i),b(i)));
+			productTest(i,sum(g(i),q(i)),sum(b(i),s(i)));
+			
+			productTest(i,sum(s(i),g(i)),sum(b(i),q(i)));
+			productTest(i,sum(s(i),g(i)),sum(q(i),b(i)));
+			productTest(i,sum(b(i),g(i)),sum(b(i),q(i)));
+			productTest(i,sum(b(i),g(i)),sum(q(i),b(i)));
+			productTest(i,sum(q(i),g(i)),sum(s(i),b(i)));
+			productTest(i,sum(q(i),g(i)),sum(b(i),s(i)));
+		}
+	}
+	}
