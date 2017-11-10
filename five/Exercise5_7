@@ -1,0 +1,14 @@
+//:five/Exercise5_7
+
+/**创建一个没有构造器的类，并在main()中创建其对象,用以验证编译器是否真的自动加入了默认构造器
+*@HaoRanZhang
+*/
+
+public class Exercise5_7{
+	public static void main(String[] args){
+		System.out.println("Hello");
+		new Test();
+	}
+}
+
+class Test{}
