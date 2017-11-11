@@ -11,17 +11,17 @@ import java.util.*;
 public class Exercise5_9 {
 
 	public static void main(String[] args) {
-		new testThis();
+		new TestThis();
 	}
 }
 
-class testThis{
-	testThis(){
+class TestThis{
+	TestThis(){
 		this(5);//为this添加参数列表，将会产生对此参数列表的某个构造器的明确调用
 		          //且必须将构造器的调用置于最起始处
 		         //除构造器之外，编译器禁止在其他任何方法中调用构造器。
 	}
-	testThis(int num){
+	TestThis(int num){
 		System.out.println("num ="+num);
 	}
 }
