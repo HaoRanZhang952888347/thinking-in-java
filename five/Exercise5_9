@@ -1,0 +1,27 @@
+package five;
+
+import java.util.*;
+
+/**编写一个具有两个(重载)构造器的类，并在第一个构造器中通过this调用第二个构造器
+ *
+ * @author apple
+ *
+ */
+
+public class Exercise5_9 {
+
+	public static void main(String[] args) {
+		new testThis();
+	}
+}
+
+class testThis{
+	testThis(){
+		this(5);//为this添加参数列表，将会产生对此参数列表的某个构造器的明确调用
+		          //且必须将构造器的调用置于最起始处
+		         //除构造器之外，编译器禁止在其他任何方法中调用构造器。
+	}
+	testThis(int num){
+		System.out.println("num ="+num);
+	}
+}
