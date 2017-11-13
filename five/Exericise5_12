@@ -1,0 +1,33 @@
+package five;
+
+/**编写一个名为Tank的类，此类的状态可以是“满的”或“空的”。其终结条件是：对象被清理时必须处于空的
+ * 状态。请编写finalize()以检验终结条件是否成立。在main()中测试Tank可能发生的几种使用方式
+ * @author apple
+ *
+ */
+/*???????????????????????????????????????????????有时候运行不成功，不知道原因*/
+public class Exercise5_12 {
+	public static void main(String[] args) {
+		//Tank tank = new Tank(true);
+		//tank.checkEmpty();
+		new Tank(true);
+		//new Tank(true).checkEmpty();
+		System.gc();
+	}
+
+}
+
+class Tank{
+	boolean checkedFull = false;
+	Tank(boolean checkFull){
+		checkedFull = checkFull;
+	}
+	void checkEmpty() {
+		checkedFull = false;
+	}
+	protected void finalize() {
+		if(checkedFull) {
+			System.out.println("Error:对象不为空");
+		}
+	}
+}
