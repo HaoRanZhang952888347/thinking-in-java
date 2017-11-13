@@ -1,0 +1,33 @@
+package five;
+
+/**编写一个具有finalize()方法的类,并在方法中打印消息。在main()中为该类创建一个对象。试解释这个程序的行为
+ * 
+ * @author apple
+ *
+ */
+
+public class Exercise5_10 {
+	public static void main(String[] args) {
+		//Door door = new Door(true);
+		//door.checkClose();
+		new Door(true).checkClose();
+		new Door(true);
+		//
+		System.gc();//用于强制进行终结动作
+	}
+}
+
+class Door{
+	boolean checkedOpen=false;
+	Door(boolean checkOpen){
+		checkedOpen=checkOpen;
+	}
+	void checkClose() {
+		checkedOpen=false;
+	}
+	protected void finalize() {
+		if(checkedOpen) {
+			System.out.println("Error:门没关");
+		}
+	}
+}
