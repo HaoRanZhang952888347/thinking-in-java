@@ -1,6 +1,6 @@
 package five;
-//冒泡排序
-class Sort{
+
+class Sort{//冒泡排序
 	int i,temp;
 	boolean change = false;
 	Sort(int a[]){
@@ -16,13 +16,68 @@ class Sort{
 	}
 }
 
+class Compare{//将两个数组按从小到大合并到一个数组中
+	Compare(int[] a,int[] b,int[] c){
+		int La_len = a.length;
+		int Lb_len = b.length;
+		int z=0,i=0,j=0;
+		
+		while((i<La_len) && (j<Lb_len)){
+			if(a[i]<b[j]) {
+				c[z]=a[i];
+				i++;
+				z++;
+			}else {
+				c[z]=b[j];
+				j++;
+				z++;
+			}
+		}
+		
+		while(i<La_len) {
+			c[z]=a[i];
+			i++;
+			z++;
+		}
+		
+		while(j<Lb_len) {
+			c[z]=b[j];
+			j++;
+			z++;
+		}	
+	}
+}
+
+
+class OutPut{//输出数组
+	OutPut(int[] a){
+		for(int i = 0;i < a.length;i++) {
+			System.out.print("a:"+a[i]+",");
+		}
+		System.out.println();
+	}
+	OutPut(int[] a,int b){
+		for(int i = 0;i < b;i++) {
+			System.out.print("a:"+a[i]+",");
+		}
+		System.out.println();
+	}
+}
+
 public class ForTest{
 	public static void main(String[] args) {
 		int[] a = {4,2,3,4,9,7,5,1,8,2,6};
-		new Sort(a);
-		for(int i = 0;i < a.length;i++) {
-			System.out.print(a[i]+",");
-		}
+		int[] b = {5,3,4,8,2,9,6};
+		int[] c = new int[100];
+		int num = 0;
 		
+		new Sort(a);
+		new Sort(b);
+		new Compare(a,b,c);
+		
+		new OutPut(a);
+		new OutPut(b);
+		num=a.length+b.length;
+		new OutPut(c,num);	
 	}
 }
